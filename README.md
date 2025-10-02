@@ -580,5 +580,5 @@ Nesta aula, você aprendeu:
 
 ---
 
-**[⬅️ Voltar para o Índice Principal]([../README.md](https://github.com/placidoneto/spring-boot-lecture/README.md))**
+**[⬅️ Voltar para o Índice Principal]([https://github.com/placidoneto/spring-boot-lecture](https://github.com/placidoneto/spring-boot-lecture)**
 
