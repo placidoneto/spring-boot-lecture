@@ -3,186 +3,581 @@
         alt="Spring Logo"
         src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/276374559/original/ce487077a1a2eafcdf50c6cb942e98b5add18def/develop-java-spring-boot-rest-apis-application.png"
       />
-    <h1> API REST com Spring Boot </h1>
+    <h1> Introdução ao Spring Boot e Configuração do Ambiente </h1>
 </div>
 
-## Objetivo
+## 📋 Índice
 
-Este curso tem como objetivo capacitar os alunos no desenvolvimento de APIs REST profissionais utilizando o ecossistema Spring Boot. Ao final do curso, os participantes serão capazes de:
+1. [Objetivos da Aula](#objetivos-da-aula)
+2. [O que é Spring Boot?](#o-que-é-spring-boot)
+3. [Instalação do Java JDK](#instalação-do-java-jdk)
+4. [Instalação do Maven/Gradle](#instalação-do-mavengradle)
+5. [Criação de Projeto com Spring Initializr](#criação-de-projeto-com-spring-initializr)
+6. [Estrutura de um Projeto Spring Boot](#estrutura-de-um-projeto-spring-boot)
+7. [Primeira Aplicação "Hello World"](#primeira-aplicação-hello-world)
+8. [Executando a Aplicação](#executando-a-aplicação)
+9. [Exercícios Práticos](#exercícios-práticos)
+10. [Recursos Adicionais](#recursos-adicionais)
 
-- **Compreender os fundamentos** de APIs REST e os princípios de arquitetura RESTful
-- **Desenvolver aplicações** robustas e escaláveis com Spring Boot
-- **Implementar operações CRUD** completas utilizando Spring Data JPA
-- **Integrar bancos de dados** relacionais (PostgreSQL, MySQL) em aplicações Spring
-- **Aplicar boas práticas** de desenvolvimento, incluindo tratamento de exceções, validações e padronização de respostas
-- **Implementar segurança** em APIs utilizando Spring Security e autenticação JWT
-- **Documentar APIs** de forma profissional utilizando Swagger/OpenAPI
-- **Testar aplicações** com JUnit e Mockito para garantir qualidade e confiabilidade
-- **Gerenciar relacionamentos** entre entidades (One-to-One, One-to-Many, Many-to-Many)
-- **Aplicar padrões de projeto** como DTO, Service Layer e Repository Pattern
+---
 
-O curso aborda desde conceitos fundamentais até técnicas avançadas, preparando os alunos para o mercado de trabalho no desenvolvimento de aplicações backend modernas.
+## 🎯 Objetivos da Aula
 
-## Metodologia
+Ao final desta aula, você será capaz de:
 
-O curso adota uma abordagem **progressiva e prática**, partindo do básico ao avançado de maneira cuidadosa e completa. A metodologia inclui:
+- ✅ Compreender o que é Spring Boot e suas vantagens
+- ✅ Instalar e configurar o ambiente de desenvolvimento Java
+- ✅ Criar um projeto Spring Boot utilizando o Spring Initializr
+- ✅ Entender a estrutura de pastas e arquivos de um projeto Spring Boot
+- ✅ Desenvolver e executar sua primeira aplicação REST "Hello World"
 
-### Estrutura de Aprendizado
+---
 
-- **Aulas Objetivas**: Cada tópico é apresentado de forma clara e direta, focando nos conceitos essenciais e sua aplicação prática
-- **Progressão Gradual**: O conteúdo evolui naturalmente, desde fundamentos até técnicas avançadas, garantindo solidez no aprendizado
-- **Aprendizado Incremental**: Conceitos são construídos de forma progressiva, com cada novo tópico baseando-se nos anteriores
+## 🌱 O que é Spring Boot?
 
-### Organização do Repositório
+**Spring Boot** é um framework Java que simplifica o desenvolvimento de aplicações baseadas no Spring Framework. Ele fornece:
 
-O processo de aquisição dos conhecimentos deve ser realizado a partir do estudo de cada branch existente neste repositório:
+### Principais Características
 
-- **Branches Temáticas**: Cada branch representa um conjunto específico de conceitos e práticas
-- **Código Evolutivo**: O código é desenvolvido e refatorado progressivamente, demonstrando a evolução das melhores práticas
-- **Exemplos Práticos**: Todos os conceitos são acompanhados de implementações funcionais e exemplos reais
+- **Configuração Automática**: Reduz drasticamente a necessidade de configuração manual
+- **Servidores Embarcados**: Tomcat, Jetty ou Undertow embutidos (não precisa de servidor externo)
+- **Starters**: Dependências pré-configuradas para diferentes funcionalidades
+- **Sem Geração de Código**: Não gera código, apenas configuração
+- **Sem XML**: Configuração baseada em anotações Java
 
-### Formato das Aulas
+### Por que usar Spring Boot?
 
-- **Teoria + Prática**: Combinação equilibrada de explicações conceituais e implementação hands-on
-- **Exercícios de Fixação**: Atividades práticas para consolidar o aprendizado de cada tópico
-- **Trabalhos Práticos**: Projetos mais abrangentes que integram múltiplos conceitos
-- **Código Comentado**: Implementações detalhadamente documentadas para facilitar a compreensão
+- 🚀 **Rápido**: Crie aplicações para produção rapidamente
+- 📦 **Convenção sobre Configuração**: Padrões que funcionam imediatamente
+- 🔧 **Fácil Manutenção**: Estrutura organizada e padronizada
 
-### Acompanhamento
 
-- Cada conteúdo pode ser estudado de forma independente através de sua respectiva branch
-- Os alunos devem seguir a ordem sugerida na agenda para melhor aproveitamento
-- Recomenda-se prática constante e experimentação com o código fornecido
+---
 
-## Agenda
+## ☕ Instalação do Java JDK
 
-O curso está organizado em 20 conteúdos progressivos, divididos em dois bimestres, cobrindo desde os fundamentos até conceitos intermediários de desenvolvimento de APIs REST com Spring Boot.
+### Passo 1: Verificar se o Java já está instalado
 
-### 1º Bimestre - Fundamentos e Operações Básicas
+Abra o terminal e execute:
 
-<a href="https://github.com/placidoneto/spring-boot-lecture/tree/conteudo01-introducao-spring-boot">**Conteúdo 1: Introdução ao Spring Boot e Configuração do Ambiente**</a>
+```bash
+java -version
+```
 
-- Instalação do Java JDK e Maven/Gradle
-- Criação de projeto Spring Boot com Spring Initializr
-- Estrutura de um projeto Spring Boot
-- Primeira aplicação "Hello World"
+Se o Java estiver instalado, você verá a versão. Caso contrário, siga para a instalação.
 
-**Conteúdo 2: Fundamentos de APIs REST**
-- Conceitos de arquitetura REST
-- Protocolo HTTP e métodos (GET, POST, PUT, DELETE, PATCH)
-- Status Codes e boas práticas
-- Ferramentas de teste: Postman e Thunder Client
+### Passo 2: Download do JDK
 
-**Conteúdo 3: Controllers e Mapeamento de Requisições**
-- Anotações @RestController e @RequestMapping
-- Métodos HTTP com @GetMapping, @PostMapping, @PutMapping, @DeleteMapping
-- Parâmetros de requisição: @PathVariable, @RequestParam, @RequestBody
-- Retorno de dados em JSON
+**Recomendação**: Use Java 17 LTS ou Java 21 LTS (versões Long-Term Support)
 
-**Conteúdo 4: Configuração de Banco de Dados**
-- Integração com PostgreSQL e MySQL
-- Configuração do application.properties
-- Dependências Spring Data JPA e drivers JDBC
-- Criação automática de tabelas com Hibernate
+#### Opções de Download:
 
-**Conteúdo 5: JPA e Entidades**
-- Mapeamento objeto-relacional (ORM)
-- Anotações @Entity, @Table, @Id, @GeneratedValue
-- Tipos de dados e @Column
-- Estratégias de geração de ID
+1. **Oracle JDK**: [https://www.oracle.com/java/technologies/downloads/](https://www.oracle.com/java/technologies/downloads/)
+2. **OpenJDK**: [https://adoptium.net/](https://adoptium.net/) (Eclipse Temurin - recomendado)
+3. **Amazon Corretto**: [https://aws.amazon.com/corretto/](https://aws.amazon.com/corretto/)
 
-**Conteúdo 6: Spring Data JPA e Repositories**
-- Interface JpaRepository
-- Métodos padrão do CRUD
-- Query Methods e convenções de nomenclatura
-- Métodos personalizados com @Query
+### Passo 3: Instalação
 
-**Conteúdo 7: Implementação CRUD Completo**
-- Criação de recursos (POST)
-- Listagem de recursos (GET all)
-- Busca por ID (GET by id)
-- Atualização de recursos (PUT)
-- Remoção de recursos (DELETE)
+#### macOS
+```bash
+# Usando Homebrew
+brew install openjdk@17
 
-**Conteúdo 8: Service Layer e Arquitetura em Camadas**
-- Padrão de arquitetura em camadas
-- Separação de responsabilidades
-- Anotação @Service
-- Injeção de dependências com @Autowired
+# Adicionar ao PATH (adicione ao ~/.zshrc ou ~/.bash_profile)
+echo 'export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+```
 
-**Conteúdo 9: DTOs (Data Transfer Objects)**
-- Conceito e importância dos DTOs
-- Criação de classes DTO
-- Conversão entre Entity e DTO
-- Biblioteca ModelMapper
+#### Linux (Ubuntu/Debian)
+```bash
+sudo apt update
+sudo apt install openjdk-17-jdk
 
-**Conteúdo 10: Validação de Dados**
-- Bean Validation API
-- Anotações de validação: @NotNull, @NotEmpty, @Size, @Email, @Min, @Max
-- @Valid e @Validated
-- Mensagens de validação personalizadas
+# Verificar instalação
+java -version
+javac -version
+```
 
-### 2º Bimestre - Conceitos Intermediários e Avançados
+#### Windows
+1. Baixe o instalador `.exe` ou `.msi`
+2. Execute o instalador e siga as instruções
+3. Configure a variável de ambiente `JAVA_HOME`:
+   - Acesse: Painel de Controle → Sistema → Configurações Avançadas → Variáveis de Ambiente
+   - Crie `JAVA_HOME` apontando para o diretório de instalação (ex: `C:\Program Files\Java\jdk-17`)
+   - Adicione `%JAVA_HOME%\bin` ao `PATH`
 
-**Conteúdo 11: Tratamento de Exceções**
-- Exception Handler com @ExceptionHandler
-- @ControllerAdvice para tratamento global
-- Criação de exceções customizadas
-- Padronização de respostas de erro
 
-**Conteúdo 12: Relacionamentos entre Entidades (Parte 1)**
-- Relacionamento One-to-One (@OneToOne)
-- Relacionamento One-to-Many (@OneToMany)
-- Cascading e FetchType (LAZY vs EAGER)
-- Tratamento de JSON infinito com @JsonIgnore
+### Passo 4: Verificar Instalação
 
-**Conteúdo 13: Relacionamentos entre Entidades (Parte 2)**
-- Relacionamento Many-to-Many (@ManyToMany)
-- Tabelas de junção customizadas
-- Relacionamentos bidirecionais
-- Mapeamento avançado com @JoinColumn e @JoinTable
+```bash
+java -version
+javac -version
+echo $JAVA_HOME  # Linux/macOS
+echo %JAVA_HOME%  # Windows
+```
 
-**Conteúdo 14: Paginação e Ordenação**
-- Interface Pageable
-- Parâmetros page, size e sort
-- Retorno de dados paginados com Page<T>
-- Customização de consultas paginadas
+---
 
-**Conteúdo 15: Filtros e Buscas Avançadas**
-- Query Parameters para filtros
-- Specification API do Spring Data JPA
-- Criteria API para consultas dinâmicas
-- Buscas com múltiplos critérios
+## 🔨 Instalação do Maven/Gradle
 
-**Conteúdo 16: Documentação com Swagger/OpenAPI**
-- Integração do SpringDoc OpenAPI
-- Anotações para documentação
-- Customização da interface Swagger UI
-- Documentação de schemas e responses
+### Maven
 
-**Conteúdo 17: Spring Security - Fundamentos**
-- Conceitos de autenticação e autorização
-- Configuração básica do Spring Security
-- Autenticação em memória
-- Proteção de endpoints
+Maven é uma ferramenta de automação e gerenciamento de projetos Java.
 
-**Conteúdo 18: Autenticação JWT (JSON Web Token)**
-- Conceitos de JWT
-- Geração e validação de tokens
-- Implementação de login e registro
-- Configuração de filtros de autenticação
+#### Windows
+1. Baixe o Maven: [https://maven.apache.org/download.cgi](https://maven.apache.org/download.cgi)
+2. Extraia o arquivo ZIP em um diretório (ex: `C:\Program Files\Apache\maven`)
+3. Configure as variáveis de ambiente:
+   - `MAVEN_HOME`: diretório de instalação
+   - Adicione `%MAVEN_HOME%\bin` ao `PATH`
 
-**Conteúdo 19: Autorização e Controle de Acesso**
-- Roles e Authorities
-- Anotações @PreAuthorize e @Secured
-- Controle de acesso baseado em perfis
-- Restrição de endpoints por permissão
+#### macOS
+```bash
+brew install maven
+```
 
-**Conteúdo 20: Testes Unitários e de Integração**
-- JUnit 5 e Mockito
-- Testes de Controllers com MockMvc
-- Testes de Services e Repositories
-- @SpringBootTest e @WebMvcTest
-- Cobertura de testes
+#### Linux
+```bash
+sudo apt update
+sudo apt install maven
+```
 
+#### Verificar Instalação
+```bash
+mvn -version
+```
+
+### Gradle (Alternativa ao Maven)
+
+#### Windows/macOS/Linux
+```bash
+# Usando SDKMAN (recomendado)
+curl -s "https://get.sdkman.io" | bash
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+sdk install gradle
+
+# Ou usando Homebrew (macOS)
+brew install gradle
+```
+
+#### Verificar Instalação
+```bash
+gradle -version
+```
+
+---
+
+## 🚀 Criação de Projeto com Spring Initializr
+
+O **Spring Initializr** é uma ferramenta web que gera a estrutura inicial de projetos Spring Boot.
+
+### Método 1: Usando o Site (Recomendado para Iniciantes)
+
+1. Acesse: [https://start.spring.io/](https://start.spring.io/)
+
+2. **Configure o Projeto**:
+   - **Project**: Maven ou Gradle
+   - **Language**: Java
+   - **Spring Boot**: 3.x.x (versão estável mais recente)
+   - **Project Metadata**:
+     - Group: `com.exemplo` (seu domínio invertido)
+     - Artifact: `hello-world-api`
+     - Name: `hello-world-api`
+     - Description: `Primeira API REST com Spring Boot`
+     - Package name: `com.exemplo.helloworldapi`
+     - Packaging: **Jar**
+     - Java: **17** ou **21**
+
+<div align="center">
+    <img src="imgs/init.png" alt="Spring Initializr Interface" width="800"/>
+    <p><i>Interface do Spring Initializr para configuração do projeto</i></p>
+</div>
+
+3. **Adicione Dependências**:
+   - **Spring Web**: Para criar APIs REST
+   - **Spring Boot DevTools**: Para hot reload durante desenvolvimento (opcional)
+
+4. Clique em **GENERATE** para baixar o projeto como ZIP
+
+5. Extraia o arquivo e abra no seu IDE favorito (VS Code, Eclipse, etc..)
+
+### Método 2: Usando a CLI do Spring Boot
+
+```bash 
+# Instalar Spring Boot CLI
+brew tap spring-io/tap
+brew install spring-boot
+
+# Criar projeto
+spring init --dependencies=web --name=hello-world-api --group-id=com.exemplo --artifact-id=hello-world-api hello-world-api
+
+cd hello-world-api
+```
+
+
+---
+
+## 📁 Estrutura de um Projeto Spring Boot
+
+Após gerar o projeto, você terá a seguinte estrutura:
+
+```
+hello-world-api/
+│
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/
+│   │   │       └── exemplo/
+│   │   │           └── helloworldapi/
+│   │   │               └── HelloWorldApiApplication.java  # Classe principal
+│   │   └── resources/
+│   │       ├── application.properties  # Configurações da aplicação
+│   │       ├── static/                 # Arquivos estáticos (HTML, CSS, JS)
+│   │       └── templates/              # Templates (Thymeleaf, etc)
+│   │
+│   └── test/
+│       └── java/
+│           └── com/
+│               └── exemplo/
+│                   └── helloworldapi/
+│                       └── HelloWorldApiApplicationTests.java  # Testes
+│
+├── target/                  # Arquivos compilados (gerado pelo Maven)
+├── .gitignore              # Arquivos ignorados pelo Git
+├── mvnw                    # Maven Wrapper (Unix)
+├── mvnw.cmd                # Maven Wrapper (Windows)
+├── pom.xml                 # Configuração do Maven (dependências, plugins)
+└── README.md               # Documentação do projeto
+```
+
+### Principais Arquivos
+
+#### 1. `pom.xml` (Maven) ou `build.gradle` (Gradle)
+
+Arquivo de configuração do projeto, onde definimos:
+- Dependências (bibliotecas)
+- Plugins
+- Versão do Java
+- Configurações de build
+
+**Exemplo de `pom.xml`**:
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+         https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.2.0</version>
+        <relativePath/>
+    </parent>
+    
+    <groupId>com.exemplo</groupId>
+    <artifactId>hello-world-api</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>hello-world-api</name>
+    <description>Primeira API REST com Spring Boot</description>
+    
+    <properties>
+        <java.version>17</java.version>
+    </properties>
+    
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>
+```
+
+#### 2. `HelloWorldApiApplication.java` - Classe Principal
+
+```java
+package com.example.hello_world_api;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class HelloWorldApiApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(HelloWorldApiApplication.class, args);
+	}
+
+}
+```
+
+**Explicação**:
+- `@SpringBootApplication`: Combina três anotações importantes:
+  - `@Configuration`: Marca a classe como fonte de configurações
+  - `@EnableAutoConfiguration`: Ativa a configuração automática
+  - `@ComponentScan`: Escaneia componentes no pacote e subpacotes
+
+#### 3. `application.properties`
+
+Arquivo de configuração da aplicação:
+
+```properties
+# Porta do servidor (padrão: 8080)
+server.port=8080
+
+# Nome da aplicação
+spring.application.name=hello-world-api
+
+# Log level
+logging.level.root=INFO
+```
+
+---
+
+## 👋 Primeira Aplicação "Hello World"
+
+Vamos criar nossa primeira API REST que retorna "Hello World"!
+
+### Passo 1: Criar um Controller
+
+Crie um novo pacote `controller` dentro de `com.exemplo.helloworldapi` e adicione a classe `HelloController.java`:
+
+```java
+package com.exemplo.helloworldapi.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/api")
+public class HelloController {
+
+    @GetMapping("/hello")
+    public String hello() {
+        return "Hello World! Bem-vindo ao Spring Boot!";
+    }
+    
+    @GetMapping("/hello/json")
+    public HelloResponse helloJson() {
+        return new HelloResponse("Hello World!", "Primeira API REST com Spring Boot");
+    }
+}
+```
+
+### Passo 2: Criar uma Classe de Resposta (opcional)
+
+Crie um pacote `model` e adicione `HelloResponse.java`:
+
+```java
+package com.exemplo.helloworldapi.model;
+
+public class HelloResponse {
+    
+    private String mensagem;
+    private String descricao;
+    
+    // Construtores
+    public HelloResponse() {
+    }
+    
+    public HelloResponse(String mensagem, String descricao) {
+        this.mensagem = mensagem;
+        this.descricao = descricao;
+    }
+    
+    // Getters e Setters
+    public String getMensagem() {
+        return mensagem;
+    }
+    
+    public void setMensagem(String mensagem) {
+        this.mensagem = mensagem;
+    }
+    
+    public String getDescricao() {
+        return descricao;
+    }
+    
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+}
+```
+
+### Explicação das Anotações
+
+- **`@RestController`**: Indica que a classe é um controller REST. Combina `@Controller` + `@ResponseBody`
+- **`@RequestMapping("/api")`**: Define o caminho base para todos os endpoints desta classe
+- **`@GetMapping("/hello")`**: Mapeia requisições HTTP GET para o método específico
+- **Retorno Automático em JSON**: Spring Boot converte automaticamente objetos Java em JSON
+
+---
+
+## ▶️ Executando a Aplicação
+
+### Método 1: Pela IDE
+
+- **VS Code**: Use a extensão Spring Boot Dashboard
+- **Eclipse**: Clique com o botão direito no projeto → Run As → Spring Boot App
+
+
+### Método 2: Pelo Terminal
+
+```bash
+# Usando Maven
+./mvnw spring-boot:run
+
+# Ou no Windows
+mvnw.cmd spring-boot:run
+
+# Usando Gradle
+./gradlew bootRun
+```
+
+### Método 3: Gerando JAR Executável
+
+```bash
+# Compilar e gerar JAR
+./mvnw clean package
+
+# Executar o JAR
+java -jar target/hello-world-api-0.0.1-SNAPSHOT.jar
+```
+
+### Testando a Aplicação
+
+Após iniciar, você verá logs no console indicando que a aplicação está rodando na porta 8080.
+
+#### Usando o Navegador
+
+Acesse: [http://localhost:8080/api/hello](http://localhost:8080/api/hello)
+
+Você verá: `Hello World! Bem-vindo ao Spring Boot!`
+
+Acesse: [http://localhost:8080/api/hello/json](http://localhost:8080/api/hello/json)
+
+Você verá:
+```json
+{
+  "mensagem": "Hello World!",
+  "descricao": "Primeira API REST com Spring Boot"
+}
+```
+
+#### Usando cURL (Terminal)
+
+```bash
+curl http://localhost:8080/api/hello
+
+curl http://localhost:8080/api/hello/json
+```
+
+#### Usando Postman
+
+1. Crie uma nova requisição GET
+2. URL: `http://localhost:8080/api/hello`
+3. Envie a requisição
+4. Observe a resposta
+
+---
+
+## 📝 Exercícios Práticos
+
+### Exercício 1: Novo Endpoint
+Crie um endpoint `/api/info` que retorne informações sobre você (nome, curso, universidade) em formato JSON.
+
+### Exercício 2: Endpoint com Parâmetro
+Crie um endpoint `/api/saudacao/{nome}` que receba um nome na URL e retorne "Olá, {nome}!".
+
+**Dica**: Use `@PathVariable`
+
+```java
+@GetMapping("/saudacao/{nome}")
+public String saudacao(@PathVariable String nome) {
+    return "Olá, " + nome + "!";
+}
+```
+
+### Exercício 3: Endpoint com Query Parameter
+Crie um endpoint `/api/calculadora/soma` que receba dois números como query parameters e retorne a soma.
+
+**URL exemplo**: `http://localhost:8080/api/calculadora/soma?a=5&b=3`
+
+**Dica**: Use `@RequestParam`
+
+```java
+@GetMapping("/calculadora/soma")
+public int soma(@RequestParam int a, @RequestParam int b) {
+    return a + b;
+}
+```
+
+### Exercício 4: Alterar a Porta do Servidor
+Modifique o arquivo `application.properties` para que a aplicação rode na porta 9090.
+
+### Exercício 5: Criar Múltiplos Endpoints
+Crie um controller `CalculadoraController` com endpoints para:
+- Soma
+- Subtração
+- Multiplicação
+- Divisão
+
+---
+
+## 📚 Recursos Adicionais
+
+### Documentação Oficial
+- [Spring Boot Reference Documentation](https://docs.spring.io/spring-boot/docs/current/reference/html/)
+- [Spring Framework Documentation](https://docs.spring.io/spring-framework/docs/current/reference/html/)
+- [Spring Initializr](https://start.spring.io/)
+
+### Tutoriais e Guias
+- [Spring Guides](https://spring.io/guides)
+- [Baeldung Spring Boot Tutorials](https://www.baeldung.com/spring-boot)
+
+### Ferramentas Recomendadas
+- **IDE**: VS Code com extensões Spring
+- **API Testing**: Postman, Insomnia ou Thunder Client (extensão VS Code)
+- **Gerenciador de Versões Java**: SDKMAN (Linux/macOS) ou Chocolatey (Windows)
+
+### Próximos Passos
+- Conteúdo 2: Fundamentos de APIs REST
+- Conteúdo 3: Controllers e Mapeamento de Requisições
+- Conteúdo 4: Configuração de Banco de Dados
+
+---
+
+## 🎓 Resumo do Conteúdo
+
+Nesta aula, você aprendeu:
+
+✅ O que é Spring Boot e suas vantagens  
+✅ Como instalar e configurar Java JDK e Maven/Gradle  
+✅ Como criar um projeto usando Spring Initializr  
+✅ A estrutura de pastas de um projeto Spring Boot  
+✅ Como criar controllers e endpoints REST  
+✅ Como executar e testar sua primeira aplicação  
+
+---
+
+**[⬅️ Voltar para o Índice Principal](../README.md)**
 
